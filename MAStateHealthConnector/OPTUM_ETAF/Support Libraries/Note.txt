@@ -1,0 +1,1 @@
+Keep your application independent functions here (say file handling, date manipulation, etc). All functions required for the functioning of the framework are already present inside "CRAFT_Support.vbs".

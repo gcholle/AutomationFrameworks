@@ -1,0 +1,1 @@
+\\Nas00582pn\istarr\Automation\Application\ChartSync\ExeFiles\WinSCP\WinSCP /console /command "open ostdvu:lad758as@apsp9052:22" "option batch on" "option confirm off" "put \\Nas00582pn\istarr\Automation\Application\ChartSync\BatchJobs\QA\9-27-2012\Data_Summary_Multiple_Members\LOADCR_INGENIX_20120927025847.DAT /ravas/data/proc/in/" "exit"

@@ -1,0 +1,998 @@
+﻿<?xml version="1.0"?>
+<!DOCTYPE Report
+[
+<!ELEMENT Report (General ,(Doc|BPT)) >
+<!ATTLIST Report ver CDATA #REQUIRED tmZone CDATA #REQUIRED>
+
+<!ELEMENT General ( DocLocation ) >
+<!ATTLIST General productName CDATA #REQUIRED productVer CDATA #REQUIRED os CDATA #REQUIRED host CDATA #REQUIRED>
+
+<!ELEMENT BPT (DName,Res,DVer?,TSet?,TInst?,NodeArgs,Doc*) >
+<!ATTLIST BPT rID ID #REQUIRED >
+
+<!ELEMENT Doc (DName,Res,DVer?,TSet?,TInst?,RunType?,DT?,Step*,DIter*,Action*,Summary?,NodeArgs?) >
+<!ATTLIST Doc rID ID #REQUIRED type (Test|BC) "Test" productName CDATA #REQUIRED BCIter CDATA #IMPLIED >
+
+<!ELEMENT RunType ( #PCDATA )>
+<!ATTLIST RunType fmStep (False|True) "False" batch (False|True) "False" upDesc (False|True) "False" upChk (False|True) "False" upAS (False|True) "False">
+
+<!ELEMENT DName ( #PCDATA ) >
+
+<!ELEMENT Res ( #PCDATA ) >
+
+<!ELEMENT DVer ( #PCDATA ) >
+
+<!ELEMENT TSet ( #PCDATA ) >
+
+<!ELEMENT TInst ( #PCDATA ) >
+
+<!ELEMENT DIter (Step?,Action+,Summary?,NodeArgs)>
+<!ATTLIST DIter rID ID #REQUIRED iterID CDATA #REQUIRED>
+
+<!ELEMENT DocLocation ( #PCDATA )>
+
+<!ELEMENT Action (AName,AIter*,(Step|HtmlStep|Action)*,Summary,NodeArgs) >
+<!ATTLIST Action rID ID #REQUIRED>
+
+<!ELEMENT AIter ((Step|HtmlStep|Action)*,Summary?,NodeArgs) >
+<!ATTLIST AIter rID ID #REQUIRED iterID CDATA #REQUIRED>
+
+<!ELEMENT AName ( #PCDATA ) >
+
+<!ELEMENT Step (Obj,Details,Time,(Step|HtmlStep|Doc)*,NodeArgs) >
+<!ATTLIST Step rID ID #REQUIRED retval CDATA #IMPLIED>
+
+<!ELEMENT HtmlStep (HTML,(Step|HtmlStep|Doc)*,NodeArgs) >
+<!ATTLIST HtmlStep rID ID #REQUIRED >
+
+<!ELEMENT Obj ( #PCDATA ) >
+<!ATTLIST Obj plainTxt (False|True) "True">
+
+<!ELEMENT Details ( #PCDATA ) >
+<!ATTLIST Details plainTxt (False|True) "True">
+
+<!ELEMENT Time ( #PCDATA ) >
+
+<!ELEMENT HTML ( #PCDATA ) >
+
+<!ELEMENT Disp ( #PCDATA ) >
+
+<!ELEMENT NodeArgs (Disp,TopPane?,BtmPane?)>
+<!ATTLIST NodeArgs eType CDATA #REQUIRED icon CDATA #REQUIRED nRep CDATA #REQUIRED filter (False|True) "True">
+<!ATTLIST NodeArgs status (Passed|Failed|Done|Warning|Information) "Done">
+<!ATTLIST NodeArgs iconSel CDATA #IMPLIED nType CDATA #IMPLIED >
+
+<!ELEMENT TopPane (Path)>
+
+<!ELEMENT BtmPane ( (Path|WR)?,ASHilite?)>
+<!ATTLIST BtmPane vType CDATA "HTML">
+
+<!ELEMENT Path ( #PCDATA ) >
+
+<!ELEMENT ASHilite ( #PCDATA ) >
+
+<!ELEMENT WR ( #PCDATA ) >
+
+<!ELEMENT DT (NodeArgs) >
+<!ATTLIST DT rID ID #REQUIRED>
+
+<!ELEMENT Summary (Param*)>
+<!ATTLIST Summary sTime CDATA #IMPLIED eTime CDATA #IMPLIED passed CDATA #IMPLIED failed CDATA #IMPLIED warnings CDATA #IMPLIED retval CDATA #IMPLIED stopped (False|True) "False" >
+
+<!ELEMENT Param (ParamName,ParamVal)+ >
+<!ATTLIST Param paramInOut (In|Out) "In">
+
+<!ELEMENT ParamName ( #PCDATA ) >
+
+<!ELEMENT ParamVal ( #PCDATA ) >
+
+]
+>
+<Report ver="2.0" tmZone="India Standard Time">
+<General productName="QuickTest Professional" productVer="9.0" os="Windows XP" host="LHX00CNU7420CWT"><DocLocation><![CDATA[C:\STBK_Framework\QTP Scripts\Driver Script]]></DocLocation></General>
+<Doc rID="T1"   productName= "QuickTest Professional"  >
+<DName><![CDATA[Driver Script]]></DName>
+<Res><![CDATA[Res7]]></Res>
+<DT rID="T2">
+<NodeArgs eType="Table" icon="2" nRep="4" filter="False" >
+<Disp><![CDATA[Run-Time Data Table]]></Disp>
+<BtmPane vType="Table">
+<Path><![CDATA[Default.xls]]></Path>
+</BtmPane>
+</NodeArgs>
+</DT>
+<DIter rID="T3" iterID="1" >
+<Action rID="T4">
+<AName><![CDATA[Driver Script]]></AName>
+<Action rID="T5">
+<AName><![CDATA[Main Script]]></AName>
+<Step rID="T6" >
+<Obj plainTxt="False" ><![CDATA[TeWindow]]></Obj>
+<Details plainTxt="False" ><![CDATA[TeWindow]]></Details>
+<Time><![CDATA[7/31/2009 - 12:20:00]]></Time>
+<Step rID="T7" >
+<Obj plainTxt="False" ><![CDATA[TeScreen]]></Obj>
+<Details plainTxt="False" ><![CDATA[TeScreen]]></Details>
+<Time><![CDATA[7/31/2009 - 12:20:00]]></Time>
+<Step rID="T8" >
+<Obj plainTxt="False" ><![CDATA[TeScreen]]></Obj>
+<Details plainTxt="False" ><![CDATA[Object does not exist]]></Details>
+<Time><![CDATA[7/31/2009 - 12:20:00]]></Time>
+<NodeArgs eType="Replay" icon="6" nRep="13" nType="TeScreen" >
+<Disp><![CDATA[TeScreen]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="6" nRep="12" >
+<Disp><![CDATA[TeScreen]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T9" >
+<Obj plainTxt="False" ><![CDATA[Menu.Exist]]></Obj>
+<Details plainTxt="False" ><![CDATA["Object does not exist"]]></Details>
+<Time><![CDATA[7/31/2009 - 12:20:05]]></Time>
+<NodeArgs eType="Replay" icon="7" nRep="17" >
+<Disp><![CDATA[Menu.Exist]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T10" >
+<Obj plainTxt="False" ><![CDATA[TeScreen]]></Obj>
+<Details plainTxt="False" ><![CDATA[TeScreen]]></Details>
+<Time><![CDATA[7/31/2009 - 12:20:21]]></Time>
+<Step rID="T11" >
+<Obj plainTxt="False" ><![CDATA[WaitString "",0,0,0,0,60000,0]]></Obj>
+<Details plainTxt="False" ><![CDATA[The specified string was found at these coordinates in 0 seconds.]]></Details>
+<Time><![CDATA[7/31/2009 - 12:20:21]]></Time>
+<NodeArgs eType="Replay" icon="6" nRep="19" nType="TeScreen" >
+<Disp><![CDATA[WaitString "",0,0,0,0,60000,0]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T12" >
+<Obj plainTxt="False" ><![CDATA[WaitString "",0,0,0,0,60000,0]]></Obj>
+<Details plainTxt="False" ><![CDATA[The specified string was found at these coordinates in 0 seconds.]]></Details>
+<Time><![CDATA[7/31/2009 - 12:20:21]]></Time>
+<NodeArgs eType="Replay" icon="6" nRep="20" nType="TeScreen" >
+<Disp><![CDATA[WaitString "",0,0,0,0,60000,0]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T13" >
+<Obj plainTxt="False" ><![CDATA[Sync]]></Obj>
+<Details plainTxt="False" ><![CDATA[Sync]]></Details>
+<Time><![CDATA[7/31/2009 - 12:20:21]]></Time>
+<NodeArgs eType="Replay" icon="6" nRep="21" >
+<Disp><![CDATA[Sync]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T14" >
+<Obj plainTxt="False" ><![CDATA[SetText 3,1,"CICTBF01"]]></Obj>
+<Details plainTxt="False" ><![CDATA[SetText 3,1,"CICTBF01"]]></Details>
+<Time><![CDATA[7/31/2009 - 12:20:23]]></Time>
+<NodeArgs eType="Replay" icon="6" nRep="24" >
+<Disp><![CDATA[SetText 3,1,"CICTBF01"]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T15" >
+<Obj plainTxt="False" ><![CDATA[SendKey "TE_ENTER"]]></Obj>
+<Details plainTxt="False" ><![CDATA[SendKey "TE_ENTER"]]></Details>
+<Time><![CDATA[7/31/2009 - 12:20:23]]></Time>
+<NodeArgs eType="Replay" icon="6" nRep="26" >
+<Disp><![CDATA[SendKey "TE_ENTER"]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T16" >
+<Obj plainTxt="False" ><![CDATA[TeScreen]]></Obj>
+<Details plainTxt="False" ><![CDATA[Object exists]]></Details>
+<Time><![CDATA[7/31/2009 - 12:20:23]]></Time>
+<NodeArgs eType="Replay" icon="6" nRep="27" nType="TeScreen" >
+<Disp><![CDATA[TeScreen]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T17" >
+<Obj plainTxt="False" ><![CDATA[TeScreen]]></Obj>
+<Details plainTxt="False" ><![CDATA[Object exists]]></Details>
+<Time><![CDATA[7/31/2009 - 12:20:24]]></Time>
+<NodeArgs eType="Replay" icon="6" nRep="28" nType="TeScreen" >
+<Disp><![CDATA[TeScreen]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T18" >
+<Obj plainTxt="False" ><![CDATA[SendKey "TE_CLEAR"]]></Obj>
+<Details plainTxt="False" ><![CDATA[SendKey "TE_CLEAR"]]></Details>
+<Time><![CDATA[7/31/2009 - 12:20:24]]></Time>
+<NodeArgs eType="Replay" icon="6" nRep="30" >
+<Disp><![CDATA[SendKey "TE_CLEAR"]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T19" >
+<Obj plainTxt="False" ><![CDATA[WaitString "",0,0,0,0,60000,0]]></Obj>
+<Details plainTxt="False" ><![CDATA[The specified string was found at these coordinates in 0 seconds.]]></Details>
+<Time><![CDATA[7/31/2009 - 12:20:25]]></Time>
+<NodeArgs eType="Replay" icon="6" nRep="31" nType="TeScreen" >
+<Disp><![CDATA[WaitString "",0,0,0,0,60000,0]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T20" >
+<Obj plainTxt="False" ><![CDATA[WaitString "",0,0,0,0,60000,0]]></Obj>
+<Details plainTxt="False" ><![CDATA[The specified string was found at these coordinates in 0 seconds.]]></Details>
+<Time><![CDATA[7/31/2009 - 12:20:25]]></Time>
+<NodeArgs eType="Replay" icon="6" nRep="32" nType="TeScreen" >
+<Disp><![CDATA[WaitString "",0,0,0,0,60000,0]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T21" >
+<Obj plainTxt="False" ><![CDATA[Sync]]></Obj>
+<Details plainTxt="False" ><![CDATA[Sync]]></Details>
+<Time><![CDATA[7/31/2009 - 12:20:25]]></Time>
+<NodeArgs eType="Replay" icon="6" nRep="33" >
+<Disp><![CDATA[Sync]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T22" >
+<Obj plainTxt="False" ><![CDATA[SetText 1,2,"TOFU"]]></Obj>
+<Details plainTxt="False" ><![CDATA[SetText 1,2,"TOFU"]]></Details>
+<Time><![CDATA[7/31/2009 - 12:20:26]]></Time>
+<NodeArgs eType="Replay" icon="6" nRep="36" >
+<Disp><![CDATA[SetText 1,2,"TOFU"]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T23" >
+<Obj plainTxt="False" ><![CDATA[SendKey "TE_ENTER"]]></Obj>
+<Details plainTxt="False" ><![CDATA[SendKey "TE_ENTER"]]></Details>
+<Time><![CDATA[7/31/2009 - 12:20:26]]></Time>
+<NodeArgs eType="Replay" icon="6" nRep="38" >
+<Disp><![CDATA[SendKey "TE_ENTER"]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T24" >
+<Obj plainTxt="False" ><![CDATA[TeScreen]]></Obj>
+<Details plainTxt="False" ><![CDATA[Object exists]]></Details>
+<Time><![CDATA[7/31/2009 - 12:20:27]]></Time>
+<NodeArgs eType="Replay" icon="6" nRep="39" nType="TeScreen" >
+<Disp><![CDATA[TeScreen]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T25" >
+<Obj plainTxt="False" ><![CDATA[TeScreen]]></Obj>
+<Details plainTxt="False" ><![CDATA[Object exists]]></Details>
+<Time><![CDATA[7/31/2009 - 12:20:28]]></Time>
+<NodeArgs eType="Replay" icon="6" nRep="40" nType="TeScreen" >
+<Disp><![CDATA[TeScreen]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T26" >
+<Obj plainTxt="False" ><![CDATA[WaitString "",0,0,0,0,60000,0]]></Obj>
+<Details plainTxt="False" ><![CDATA[The specified string was found at these coordinates in 0 seconds.]]></Details>
+<Time><![CDATA[7/31/2009 - 12:20:28]]></Time>
+<NodeArgs eType="Replay" icon="6" nRep="41" nType="TeScreen" >
+<Disp><![CDATA[WaitString "",0,0,0,0,60000,0]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T27" >
+<Obj plainTxt="False" ><![CDATA[TeScreen]]></Obj>
+<Details plainTxt="False" ><![CDATA[Object exists]]></Details>
+<Time><![CDATA[7/31/2009 - 12:20:28]]></Time>
+<NodeArgs eType="Replay" icon="6" nRep="42" nType="TeScreen" >
+<Disp><![CDATA[TeScreen]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T28" >
+<Obj plainTxt="False" ><![CDATA[TeScreen]]></Obj>
+<Details plainTxt="False" ><![CDATA[Object exists]]></Details>
+<Time><![CDATA[7/31/2009 - 12:20:29]]></Time>
+<NodeArgs eType="Replay" icon="6" nRep="43" nType="TeScreen" >
+<Disp><![CDATA[TeScreen]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T29" >
+<Obj plainTxt="False" ><![CDATA[SendKey "TE_CLEAR"]]></Obj>
+<Details plainTxt="False" ><![CDATA[SendKey "TE_CLEAR"]]></Details>
+<Time><![CDATA[7/31/2009 - 12:20:29]]></Time>
+<NodeArgs eType="Replay" icon="6" nRep="45" >
+<Disp><![CDATA[SendKey "TE_CLEAR"]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T30" >
+<Obj plainTxt="False" ><![CDATA[SendKey "TE_HOME"]]></Obj>
+<Details plainTxt="False" ><![CDATA[SendKey "TE_HOME"]]></Details>
+<Time><![CDATA[7/31/2009 - 12:20:29]]></Time>
+<NodeArgs eType="Replay" icon="6" nRep="47" >
+<Disp><![CDATA[SendKey "TE_HOME"]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T31" >
+<Obj plainTxt="False" ><![CDATA[SendKey "TE_ERASE_EOF"]]></Obj>
+<Details plainTxt="False" ><![CDATA[SendKey "TE_ERASE_EOF"]]></Details>
+<Time><![CDATA[7/31/2009 - 12:20:30]]></Time>
+<NodeArgs eType="Replay" icon="6" nRep="49" >
+<Disp><![CDATA[SendKey "TE_ERASE_EOF"]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T32" >
+<Obj plainTxt="False" ><![CDATA[SendKey "TE_TAB"]]></Obj>
+<Details plainTxt="False" ><![CDATA[SendKey "TE_TAB"]]></Details>
+<Time><![CDATA[7/31/2009 - 12:20:30]]></Time>
+<NodeArgs eType="Replay" icon="6" nRep="51" >
+<Disp><![CDATA[SendKey "TE_TAB"]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T33" >
+<Obj plainTxt="False" ><![CDATA[SendKey "TE_ERASE_EOF"]]></Obj>
+<Details plainTxt="False" ><![CDATA[SendKey "TE_ERASE_EOF"]]></Details>
+<Time><![CDATA[7/31/2009 - 12:20:30]]></Time>
+<NodeArgs eType="Replay" icon="6" nRep="53" >
+<Disp><![CDATA[SendKey "TE_ERASE_EOF"]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T34" >
+<Obj plainTxt="False" ><![CDATA[SendKey "TE_TAB"]]></Obj>
+<Details plainTxt="False" ><![CDATA[SendKey "TE_TAB"]]></Details>
+<Time><![CDATA[7/31/2009 - 12:20:30]]></Time>
+<NodeArgs eType="Replay" icon="6" nRep="55" >
+<Disp><![CDATA[SendKey "TE_TAB"]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T35" >
+<Obj plainTxt="False" ><![CDATA[SendKey "TE_ERASE_EOF"]]></Obj>
+<Details plainTxt="False" ><![CDATA[SendKey "TE_ERASE_EOF"]]></Details>
+<Time><![CDATA[7/31/2009 - 12:20:30]]></Time>
+<NodeArgs eType="Replay" icon="6" nRep="57" >
+<Disp><![CDATA[SendKey "TE_ERASE_EOF"]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T36" >
+<Obj plainTxt="False" ><![CDATA[SendKey "TE_TAB"]]></Obj>
+<Details plainTxt="False" ><![CDATA[SendKey "TE_TAB"]]></Details>
+<Time><![CDATA[7/31/2009 - 12:20:30]]></Time>
+<NodeArgs eType="Replay" icon="6" nRep="59" >
+<Disp><![CDATA[SendKey "TE_TAB"]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T37" >
+<Obj plainTxt="False" ><![CDATA[SendKey "TE_ERASE_EOF"]]></Obj>
+<Details plainTxt="False" ><![CDATA[SendKey "TE_ERASE_EOF"]]></Details>
+<Time><![CDATA[7/31/2009 - 12:20:30]]></Time>
+<NodeArgs eType="Replay" icon="6" nRep="61" >
+<Disp><![CDATA[SendKey "TE_ERASE_EOF"]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T38" >
+<Obj plainTxt="False" ><![CDATA[SendKey "TE_TAB"]]></Obj>
+<Details plainTxt="False" ><![CDATA[SendKey "TE_TAB"]]></Details>
+<Time><![CDATA[7/31/2009 - 12:20:30]]></Time>
+<NodeArgs eType="Replay" icon="6" nRep="63" >
+<Disp><![CDATA[SendKey "TE_TAB"]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T39" >
+<Obj plainTxt="False" ><![CDATA[SendKey "TE_ERASE_EOF"]]></Obj>
+<Details plainTxt="False" ><![CDATA[SendKey "TE_ERASE_EOF"]]></Details>
+<Time><![CDATA[7/31/2009 - 12:20:30]]></Time>
+<NodeArgs eType="Replay" icon="6" nRep="65" >
+<Disp><![CDATA[SendKey "TE_ERASE_EOF"]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T40" >
+<Obj plainTxt="False" ><![CDATA[SendKey "TE_TAB"]]></Obj>
+<Details plainTxt="False" ><![CDATA[SendKey "TE_TAB"]]></Details>
+<Time><![CDATA[7/31/2009 - 12:20:30]]></Time>
+<NodeArgs eType="Replay" icon="6" nRep="67" >
+<Disp><![CDATA[SendKey "TE_TAB"]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T41" >
+<Obj plainTxt="False" ><![CDATA[SendKey "TE_ERASE_EOF"]]></Obj>
+<Details plainTxt="False" ><![CDATA[SendKey "TE_ERASE_EOF"]]></Details>
+<Time><![CDATA[7/31/2009 - 12:20:31]]></Time>
+<NodeArgs eType="Replay" icon="6" nRep="69" >
+<Disp><![CDATA[SendKey "TE_ERASE_EOF"]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T42" >
+<Obj plainTxt="False" ><![CDATA[SendKey "TE_TAB"]]></Obj>
+<Details plainTxt="False" ><![CDATA[SendKey "TE_TAB"]]></Details>
+<Time><![CDATA[7/31/2009 - 12:20:31]]></Time>
+<NodeArgs eType="Replay" icon="6" nRep="71" >
+<Disp><![CDATA[SendKey "TE_TAB"]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T43" >
+<Obj plainTxt="False" ><![CDATA[SendKey "TE_ERASE_EOF"]]></Obj>
+<Details plainTxt="False" ><![CDATA[SendKey "TE_ERASE_EOF"]]></Details>
+<Time><![CDATA[7/31/2009 - 12:20:31]]></Time>
+<NodeArgs eType="Replay" icon="6" nRep="73" >
+<Disp><![CDATA[SendKey "TE_ERASE_EOF"]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T44" >
+<Obj plainTxt="False" ><![CDATA[SendKey "TE_TAB"]]></Obj>
+<Details plainTxt="False" ><![CDATA[SendKey "TE_TAB"]]></Details>
+<Time><![CDATA[7/31/2009 - 12:20:31]]></Time>
+<NodeArgs eType="Replay" icon="6" nRep="75" >
+<Disp><![CDATA[SendKey "TE_TAB"]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T45" >
+<Obj plainTxt="False" ><![CDATA[SendKey "TE_ERASE_EOF"]]></Obj>
+<Details plainTxt="False" ><![CDATA[SendKey "TE_ERASE_EOF"]]></Details>
+<Time><![CDATA[7/31/2009 - 12:20:31]]></Time>
+<NodeArgs eType="Replay" icon="6" nRep="77" >
+<Disp><![CDATA[SendKey "TE_ERASE_EOF"]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T46" >
+<Obj plainTxt="False" ><![CDATA[SendKey "TE_TAB"]]></Obj>
+<Details plainTxt="False" ><![CDATA[SendKey "TE_TAB"]]></Details>
+<Time><![CDATA[7/31/2009 - 12:20:31]]></Time>
+<NodeArgs eType="Replay" icon="6" nRep="79" >
+<Disp><![CDATA[SendKey "TE_TAB"]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T47" >
+<Obj plainTxt="False" ><![CDATA[SendKey "TE_ERASE_EOF"]]></Obj>
+<Details plainTxt="False" ><![CDATA[SendKey "TE_ERASE_EOF"]]></Details>
+<Time><![CDATA[7/31/2009 - 12:20:31]]></Time>
+<NodeArgs eType="Replay" icon="6" nRep="81" >
+<Disp><![CDATA[SendKey "TE_ERASE_EOF"]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T48" >
+<Obj plainTxt="False" ><![CDATA[SendKey "TE_TAB"]]></Obj>
+<Details plainTxt="False" ><![CDATA[SendKey "TE_TAB"]]></Details>
+<Time><![CDATA[7/31/2009 - 12:20:31]]></Time>
+<NodeArgs eType="Replay" icon="6" nRep="83" >
+<Disp><![CDATA[SendKey "TE_TAB"]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T49" >
+<Obj plainTxt="False" ><![CDATA[SendKey "TE_ERASE_EOF"]]></Obj>
+<Details plainTxt="False" ><![CDATA[SendKey "TE_ERASE_EOF"]]></Details>
+<Time><![CDATA[7/31/2009 - 12:20:31]]></Time>
+<NodeArgs eType="Replay" icon="6" nRep="85" >
+<Disp><![CDATA[SendKey "TE_ERASE_EOF"]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T50" >
+<Obj plainTxt="False" ><![CDATA[SendKey "TE_TAB"]]></Obj>
+<Details plainTxt="False" ><![CDATA[SendKey "TE_TAB"]]></Details>
+<Time><![CDATA[7/31/2009 - 12:20:31]]></Time>
+<NodeArgs eType="Replay" icon="6" nRep="87" >
+<Disp><![CDATA[SendKey "TE_TAB"]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T51" >
+<Obj plainTxt="False" ><![CDATA[SendKey "TE_ERASE_EOF"]]></Obj>
+<Details plainTxt="False" ><![CDATA[SendKey "TE_ERASE_EOF"]]></Details>
+<Time><![CDATA[7/31/2009 - 12:20:32]]></Time>
+<NodeArgs eType="Replay" icon="6" nRep="89" >
+<Disp><![CDATA[SendKey "TE_ERASE_EOF"]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T52" >
+<Obj plainTxt="False" ><![CDATA[SendKey "TE_TAB"]]></Obj>
+<Details plainTxt="False" ><![CDATA[SendKey "TE_TAB"]]></Details>
+<Time><![CDATA[7/31/2009 - 12:20:32]]></Time>
+<NodeArgs eType="Replay" icon="6" nRep="91" >
+<Disp><![CDATA[SendKey "TE_TAB"]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T53" >
+<Obj plainTxt="False" ><![CDATA[SendKey "TE_ERASE_EOF"]]></Obj>
+<Details plainTxt="False" ><![CDATA[SendKey "TE_ERASE_EOF"]]></Details>
+<Time><![CDATA[7/31/2009 - 12:20:32]]></Time>
+<NodeArgs eType="Replay" icon="6" nRep="93" >
+<Disp><![CDATA[SendKey "TE_ERASE_EOF"]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T54" >
+<Obj plainTxt="False" ><![CDATA[SendKey "TE_TAB"]]></Obj>
+<Details plainTxt="False" ><![CDATA[SendKey "TE_TAB"]]></Details>
+<Time><![CDATA[7/31/2009 - 12:20:32]]></Time>
+<NodeArgs eType="Replay" icon="6" nRep="95" >
+<Disp><![CDATA[SendKey "TE_TAB"]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T55" >
+<Obj plainTxt="False" ><![CDATA[SendKey "TE_ERASE_EOF"]]></Obj>
+<Details plainTxt="False" ><![CDATA[SendKey "TE_ERASE_EOF"]]></Details>
+<Time><![CDATA[7/31/2009 - 12:20:32]]></Time>
+<NodeArgs eType="Replay" icon="6" nRep="97" >
+<Disp><![CDATA[SendKey "TE_ERASE_EOF"]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T56" >
+<Obj plainTxt="False" ><![CDATA[SendKey "TE_TAB"]]></Obj>
+<Details plainTxt="False" ><![CDATA[SendKey "TE_TAB"]]></Details>
+<Time><![CDATA[7/31/2009 - 12:20:32]]></Time>
+<NodeArgs eType="Replay" icon="6" nRep="99" >
+<Disp><![CDATA[SendKey "TE_TAB"]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T57" >
+<Obj plainTxt="False" ><![CDATA[SendKey "TE_ERASE_EOF"]]></Obj>
+<Details plainTxt="False" ><![CDATA[SendKey "TE_ERASE_EOF"]]></Details>
+<Time><![CDATA[7/31/2009 - 12:20:32]]></Time>
+<NodeArgs eType="Replay" icon="6" nRep="101" >
+<Disp><![CDATA[SendKey "TE_ERASE_EOF"]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T58" >
+<Obj plainTxt="False" ><![CDATA[SendKey "TE_TAB"]]></Obj>
+<Details plainTxt="False" ><![CDATA[SendKey "TE_TAB"]]></Details>
+<Time><![CDATA[7/31/2009 - 12:20:32]]></Time>
+<NodeArgs eType="Replay" icon="6" nRep="103" >
+<Disp><![CDATA[SendKey "TE_TAB"]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T59" >
+<Obj plainTxt="False" ><![CDATA[SendKey "TE_ERASE_EOF"]]></Obj>
+<Details plainTxt="False" ><![CDATA[SendKey "TE_ERASE_EOF"]]></Details>
+<Time><![CDATA[7/31/2009 - 12:20:32]]></Time>
+<NodeArgs eType="Replay" icon="6" nRep="105" >
+<Disp><![CDATA[SendKey "TE_ERASE_EOF"]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T60" >
+<Obj plainTxt="False" ><![CDATA[SendKey "TE_TAB"]]></Obj>
+<Details plainTxt="False" ><![CDATA[SendKey "TE_TAB"]]></Details>
+<Time><![CDATA[7/31/2009 - 12:20:32]]></Time>
+<NodeArgs eType="Replay" icon="6" nRep="107" >
+<Disp><![CDATA[SendKey "TE_TAB"]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T61" >
+<Obj plainTxt="False" ><![CDATA[WaitString "",0,0,0,0,60000,0]]></Obj>
+<Details plainTxt="False" ><![CDATA[The specified string was found at these coordinates in 0 seconds.]]></Details>
+<Time><![CDATA[7/31/2009 - 12:20:33]]></Time>
+<NodeArgs eType="Replay" icon="6" nRep="108" nType="TeScreen" >
+<Disp><![CDATA[WaitString "",0,0,0,0,60000,0]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T62" >
+<Obj plainTxt="False" ><![CDATA[TeScreen]]></Obj>
+<Details plainTxt="False" ><![CDATA[Object exists]]></Details>
+<Time><![CDATA[7/31/2009 - 12:20:33]]></Time>
+<NodeArgs eType="Replay" icon="6" nRep="109" nType="TeScreen" >
+<Disp><![CDATA[TeScreen]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T63" >
+<Obj plainTxt="False" ><![CDATA[TeScreen]]></Obj>
+<Details plainTxt="False" ><![CDATA[Object exists]]></Details>
+<Time><![CDATA[7/31/2009 - 12:20:33]]></Time>
+<NodeArgs eType="Replay" icon="6" nRep="110" nType="TeScreen" >
+<Disp><![CDATA[TeScreen]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T64" >
+<Obj plainTxt="False" ><![CDATA[WaitString "",0,0,0,0,60000,0]]></Obj>
+<Details plainTxt="False" ><![CDATA[The specified string was found at these coordinates in 0 seconds.]]></Details>
+<Time><![CDATA[7/31/2009 - 12:20:33]]></Time>
+<NodeArgs eType="Replay" icon="6" nRep="111" nType="TeScreen" >
+<Disp><![CDATA[WaitString "",0,0,0,0,60000,0]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T65" >
+<Obj plainTxt="False" ><![CDATA[WaitString "",0,0,0,0,60000,0]]></Obj>
+<Details plainTxt="False" ><![CDATA[The specified string was found at these coordinates in 0 seconds.]]></Details>
+<Time><![CDATA[7/31/2009 - 12:20:33]]></Time>
+<NodeArgs eType="Replay" icon="6" nRep="112" nType="TeScreen" >
+<Disp><![CDATA[WaitString "",0,0,0,0,60000,0]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T66" >
+<Obj plainTxt="False" ><![CDATA[WaitString "",0,0,0,0,60000,0]]></Obj>
+<Details plainTxt="False" ><![CDATA[The specified string was found at these coordinates in 0 seconds.]]></Details>
+<Time><![CDATA[7/31/2009 - 12:20:33]]></Time>
+<NodeArgs eType="Replay" icon="6" nRep="113" nType="TeScreen" >
+<Disp><![CDATA[WaitString "",0,0,0,0,60000,0]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T67" >
+<Obj plainTxt="False" ><![CDATA[WaitString "",0,0,0,0,60000,0]]></Obj>
+<Details plainTxt="False" ><![CDATA[The specified string was found at these coordinates in 0 seconds.]]></Details>
+<Time><![CDATA[7/31/2009 - 12:20:33]]></Time>
+<NodeArgs eType="Replay" icon="6" nRep="114" nType="TeScreen" >
+<Disp><![CDATA[WaitString "",0,0,0,0,60000,0]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T68" >
+<Obj plainTxt="False" ><![CDATA[WaitString "",0,0,0,0,60000,0]]></Obj>
+<Details plainTxt="False" ><![CDATA[The specified string was found at these coordinates in 0 seconds.]]></Details>
+<Time><![CDATA[7/31/2009 - 12:20:34]]></Time>
+<NodeArgs eType="Replay" icon="6" nRep="115" nType="TeScreen" >
+<Disp><![CDATA[WaitString "",0,0,0,0,60000,0]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T69" >
+<Obj plainTxt="False" ><![CDATA[TeScreen]]></Obj>
+<Details plainTxt="False" ><![CDATA[Object exists]]></Details>
+<Time><![CDATA[7/31/2009 - 12:20:34]]></Time>
+<NodeArgs eType="Replay" icon="6" nRep="116" nType="TeScreen" >
+<Disp><![CDATA[TeScreen]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T70" >
+<Obj plainTxt="False" ><![CDATA[TeScreen]]></Obj>
+<Details plainTxt="False" ><![CDATA[Object exists]]></Details>
+<Time><![CDATA[7/31/2009 - 12:20:34]]></Time>
+<NodeArgs eType="Replay" icon="6" nRep="117" nType="TeScreen" >
+<Disp><![CDATA[TeScreen]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T71" >
+<Obj plainTxt="False" ><![CDATA[WaitString "",0,0,0,0,60000,0]]></Obj>
+<Details plainTxt="False" ><![CDATA[The specified string was found at these coordinates in 0 seconds.]]></Details>
+<Time><![CDATA[7/31/2009 - 12:20:34]]></Time>
+<NodeArgs eType="Replay" icon="6" nRep="118" nType="TeScreen" >
+<Disp><![CDATA[WaitString "",0,0,0,0,60000,0]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T72" >
+<Obj plainTxt="False" ><![CDATA[WaitString "",0,0,0,0,60000,0]]></Obj>
+<Details plainTxt="False" ><![CDATA[The specified string was found at these coordinates in 0 seconds.]]></Details>
+<Time><![CDATA[7/31/2009 - 12:20:34]]></Time>
+<NodeArgs eType="Replay" icon="6" nRep="119" nType="TeScreen" >
+<Disp><![CDATA[WaitString "",0,0,0,0,60000,0]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T73" >
+<Obj plainTxt="False" ><![CDATA[WaitString "",0,0,0,0,60000,0]]></Obj>
+<Details plainTxt="False" ><![CDATA[The specified string was found at these coordinates in 0 seconds.]]></Details>
+<Time><![CDATA[7/31/2009 - 12:20:34]]></Time>
+<NodeArgs eType="Replay" icon="6" nRep="120" nType="TeScreen" >
+<Disp><![CDATA[WaitString "",0,0,0,0,60000,0]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T74" >
+<Obj plainTxt="False" ><![CDATA[WaitString "",0,0,0,0,60000,0]]></Obj>
+<Details plainTxt="False" ><![CDATA[The specified string was found at these coordinates in 0 seconds.]]></Details>
+<Time><![CDATA[7/31/2009 - 12:20:34]]></Time>
+<NodeArgs eType="Replay" icon="6" nRep="121" nType="TeScreen" >
+<Disp><![CDATA[WaitString "",0,0,0,0,60000,0]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T75" >
+<Obj plainTxt="False" ><![CDATA[WaitString "",0,0,0,0,60000,0]]></Obj>
+<Details plainTxt="False" ><![CDATA[The specified string was found at these coordinates in 0 seconds.]]></Details>
+<Time><![CDATA[7/31/2009 - 12:20:34]]></Time>
+<NodeArgs eType="Replay" icon="6" nRep="122" nType="TeScreen" >
+<Disp><![CDATA[WaitString "",0,0,0,0,60000,0]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T76" >
+<Obj plainTxt="False" ><![CDATA[TeScreen]]></Obj>
+<Details plainTxt="False" ><![CDATA[Object exists]]></Details>
+<Time><![CDATA[7/31/2009 - 12:20:34]]></Time>
+<NodeArgs eType="Replay" icon="6" nRep="123" nType="TeScreen" >
+<Disp><![CDATA[TeScreen]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T77" >
+<Obj plainTxt="False" ><![CDATA[TeScreen]]></Obj>
+<Details plainTxt="False" ><![CDATA[Object exists]]></Details>
+<Time><![CDATA[7/31/2009 - 12:20:35]]></Time>
+<NodeArgs eType="Replay" icon="6" nRep="124" nType="TeScreen" >
+<Disp><![CDATA[TeScreen]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T78" >
+<Obj plainTxt="False" ><![CDATA[WaitString "",0,0,0,0,60000,0]]></Obj>
+<Details plainTxt="False" ><![CDATA[The specified string was found at these coordinates in 0 seconds.]]></Details>
+<Time><![CDATA[7/31/2009 - 12:20:35]]></Time>
+<NodeArgs eType="Replay" icon="6" nRep="125" nType="TeScreen" >
+<Disp><![CDATA[WaitString "",0,0,0,0,60000,0]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T79" >
+<Obj plainTxt="False" ><![CDATA[WaitString "",0,0,0,0,60000,0]]></Obj>
+<Details plainTxt="False" ><![CDATA[The specified string was found at these coordinates in 0 seconds.]]></Details>
+<Time><![CDATA[7/31/2009 - 12:20:35]]></Time>
+<NodeArgs eType="Replay" icon="6" nRep="126" nType="TeScreen" >
+<Disp><![CDATA[WaitString "",0,0,0,0,60000,0]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T80" >
+<Obj plainTxt="False" ><![CDATA[WaitString "",0,0,0,0,60000,0]]></Obj>
+<Details plainTxt="False" ><![CDATA[The specified string was found at these coordinates in 0 seconds.]]></Details>
+<Time><![CDATA[7/31/2009 - 12:20:35]]></Time>
+<NodeArgs eType="Replay" icon="6" nRep="127" nType="TeScreen" >
+<Disp><![CDATA[WaitString "",0,0,0,0,60000,0]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T81" >
+<Obj plainTxt="False" ><![CDATA[WaitString "",0,0,0,0,60000,0]]></Obj>
+<Details plainTxt="False" ><![CDATA[The specified string was found at these coordinates in 0 seconds.]]></Details>
+<Time><![CDATA[7/31/2009 - 12:20:35]]></Time>
+<NodeArgs eType="Replay" icon="6" nRep="128" nType="TeScreen" >
+<Disp><![CDATA[WaitString "",0,0,0,0,60000,0]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T82" >
+<Obj plainTxt="False" ><![CDATA[TeScreen]]></Obj>
+<Details plainTxt="False" ><![CDATA[Object exists]]></Details>
+<Time><![CDATA[7/31/2009 - 12:20:35]]></Time>
+<NodeArgs eType="Replay" icon="6" nRep="129" nType="TeScreen" >
+<Disp><![CDATA[TeScreen]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T83" >
+<Obj plainTxt="False" ><![CDATA[TeScreen]]></Obj>
+<Details plainTxt="False" ><![CDATA[Object exists]]></Details>
+<Time><![CDATA[7/31/2009 - 12:20:36]]></Time>
+<NodeArgs eType="Replay" icon="6" nRep="130" nType="TeScreen" >
+<Disp><![CDATA[TeScreen]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T84" >
+<Obj plainTxt="False" ><![CDATA[WaitString "",0,0,0,0,60000,0]]></Obj>
+<Details plainTxt="False" ><![CDATA[The specified string was found at these coordinates in 0 seconds.]]></Details>
+<Time><![CDATA[7/31/2009 - 12:20:36]]></Time>
+<NodeArgs eType="Replay" icon="6" nRep="131" nType="TeScreen" >
+<Disp><![CDATA[WaitString "",0,0,0,0,60000,0]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T85" >
+<Obj plainTxt="False" ><![CDATA[WaitString "",0,0,0,0,60000,0]]></Obj>
+<Details plainTxt="False" ><![CDATA[The specified string was found at these coordinates in 0 seconds.]]></Details>
+<Time><![CDATA[7/31/2009 - 12:20:36]]></Time>
+<NodeArgs eType="Replay" icon="6" nRep="132" nType="TeScreen" >
+<Disp><![CDATA[WaitString "",0,0,0,0,60000,0]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T86" >
+<Obj plainTxt="False" ><![CDATA[WaitString "",0,0,0,0,60000,0]]></Obj>
+<Details plainTxt="False" ><![CDATA[The specified string was found at these coordinates in 0 seconds.]]></Details>
+<Time><![CDATA[7/31/2009 - 12:20:36]]></Time>
+<NodeArgs eType="Replay" icon="6" nRep="133" nType="TeScreen" >
+<Disp><![CDATA[WaitString "",0,0,0,0,60000,0]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T87" >
+<Obj plainTxt="False" ><![CDATA[WaitString "",0,0,0,0,60000,0]]></Obj>
+<Details plainTxt="False" ><![CDATA[The specified string was found at these coordinates in 0 seconds.]]></Details>
+<Time><![CDATA[7/31/2009 - 12:20:36]]></Time>
+<NodeArgs eType="Replay" icon="6" nRep="134" nType="TeScreen" >
+<Disp><![CDATA[WaitString "",0,0,0,0,60000,0]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T88" >
+<Obj plainTxt="False" ><![CDATA[TeScreen]]></Obj>
+<Details plainTxt="False" ><![CDATA[Object exists]]></Details>
+<Time><![CDATA[7/31/2009 - 12:20:36]]></Time>
+<NodeArgs eType="Replay" icon="6" nRep="135" nType="TeScreen" >
+<Disp><![CDATA[TeScreen]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T89" >
+<Obj plainTxt="False" ><![CDATA[TeScreen]]></Obj>
+<Details plainTxt="False" ><![CDATA[Object exists]]></Details>
+<Time><![CDATA[7/31/2009 - 12:20:36]]></Time>
+<NodeArgs eType="Replay" icon="6" nRep="136" nType="TeScreen" >
+<Disp><![CDATA[TeScreen]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T90" >
+<Obj plainTxt="False" ><![CDATA[WaitString "",0,0,0,0,60000,0]]></Obj>
+<Details plainTxt="False" ><![CDATA[The specified string was found at these coordinates in 0 seconds.]]></Details>
+<Time><![CDATA[7/31/2009 - 12:20:37]]></Time>
+<NodeArgs eType="Replay" icon="6" nRep="137" nType="TeScreen" >
+<Disp><![CDATA[WaitString "",0,0,0,0,60000,0]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T91" >
+<Obj plainTxt="False" ><![CDATA[WaitString "",0,0,0,0,60000,0]]></Obj>
+<Details plainTxt="False" ><![CDATA[The specified string was found at these coordinates in 0 seconds.]]></Details>
+<Time><![CDATA[7/31/2009 - 12:20:37]]></Time>
+<NodeArgs eType="Replay" icon="6" nRep="138" nType="TeScreen" >
+<Disp><![CDATA[WaitString "",0,0,0,0,60000,0]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T92" >
+<Obj plainTxt="False" ><![CDATA[WaitString "",0,0,0,0,60000,0]]></Obj>
+<Details plainTxt="False" ><![CDATA[The specified string was found at these coordinates in 0 seconds.]]></Details>
+<Time><![CDATA[7/31/2009 - 12:20:37]]></Time>
+<NodeArgs eType="Replay" icon="6" nRep="139" nType="TeScreen" >
+<Disp><![CDATA[WaitString "",0,0,0,0,60000,0]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T93" >
+<Obj plainTxt="False" ><![CDATA[TeScreen]]></Obj>
+<Details plainTxt="False" ><![CDATA[Object exists]]></Details>
+<Time><![CDATA[7/31/2009 - 12:20:37]]></Time>
+<NodeArgs eType="Replay" icon="6" nRep="140" nType="TeScreen" >
+<Disp><![CDATA[TeScreen]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T94" >
+<Obj plainTxt="False" ><![CDATA[TeScreen]]></Obj>
+<Details plainTxt="False" ><![CDATA[Object exists]]></Details>
+<Time><![CDATA[7/31/2009 - 12:20:37]]></Time>
+<NodeArgs eType="Replay" icon="6" nRep="141" nType="TeScreen" >
+<Disp><![CDATA[TeScreen]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T95" >
+<Obj plainTxt="False" ><![CDATA[WaitString "",0,0,0,0,60000,0]]></Obj>
+<Details plainTxt="False" ><![CDATA[The specified string was found at these coordinates in 0 seconds.]]></Details>
+<Time><![CDATA[7/31/2009 - 12:20:38]]></Time>
+<NodeArgs eType="Replay" icon="6" nRep="142" nType="TeScreen" >
+<Disp><![CDATA[WaitString "",0,0,0,0,60000,0]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T96" >
+<Obj plainTxt="False" ><![CDATA[TeScreen]]></Obj>
+<Details plainTxt="False" ><![CDATA[Object exists]]></Details>
+<Time><![CDATA[7/31/2009 - 12:20:38]]></Time>
+<NodeArgs eType="Replay" icon="6" nRep="143" nType="TeScreen" >
+<Disp><![CDATA[TeScreen]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T97" >
+<Obj plainTxt="False" ><![CDATA[TeScreen]]></Obj>
+<Details plainTxt="False" ><![CDATA[Object exists]]></Details>
+<Time><![CDATA[7/31/2009 - 12:20:39]]></Time>
+<NodeArgs eType="Replay" icon="6" nRep="144" nType="TeScreen" >
+<Disp><![CDATA[TeScreen]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T98" >
+<Obj plainTxt="False" ><![CDATA[WaitString "",0,0,0,0,60000,0]]></Obj>
+<Details plainTxt="False" ><![CDATA[The specified string was found at these coordinates in 0 seconds.]]></Details>
+<Time><![CDATA[7/31/2009 - 12:20:39]]></Time>
+<NodeArgs eType="Replay" icon="6" nRep="145" nType="TeScreen" >
+<Disp><![CDATA[WaitString "",0,0,0,0,60000,0]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T99" >
+<Obj plainTxt="False" ><![CDATA[TeScreen]]></Obj>
+<Details plainTxt="False" ><![CDATA[Object exists]]></Details>
+<Time><![CDATA[7/31/2009 - 12:20:39]]></Time>
+<NodeArgs eType="Replay" icon="6" nRep="146" nType="TeScreen" >
+<Disp><![CDATA[TeScreen]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T100" >
+<Obj plainTxt="False" ><![CDATA[TeScreen]]></Obj>
+<Details plainTxt="False" ><![CDATA[Object exists]]></Details>
+<Time><![CDATA[7/31/2009 - 12:20:40]]></Time>
+<NodeArgs eType="Replay" icon="6" nRep="147" nType="TeScreen" >
+<Disp><![CDATA[TeScreen]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T101" >
+<Obj plainTxt="False" ><![CDATA[WaitString "",0,0,0,0,60000,0]]></Obj>
+<Details plainTxt="False" ><![CDATA[The specified string was found at these coordinates in 0 seconds.]]></Details>
+<Time><![CDATA[7/31/2009 - 12:20:40]]></Time>
+<NodeArgs eType="Replay" icon="6" nRep="148" nType="TeScreen" >
+<Disp><![CDATA[WaitString "",0,0,0,0,60000,0]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T102" >
+<Obj plainTxt="False" ><![CDATA[TeScreen]]></Obj>
+<Details plainTxt="False" ><![CDATA[Object exists]]></Details>
+<Time><![CDATA[7/31/2009 - 12:20:40]]></Time>
+<NodeArgs eType="Replay" icon="6" nRep="149" nType="TeScreen" >
+<Disp><![CDATA[TeScreen]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T103" >
+<Obj plainTxt="False" ><![CDATA[TeScreen]]></Obj>
+<Details plainTxt="False" ><![CDATA[Object exists]]></Details>
+<Time><![CDATA[7/31/2009 - 12:20:40]]></Time>
+<NodeArgs eType="Replay" icon="6" nRep="150" nType="TeScreen" >
+<Disp><![CDATA[TeScreen]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T104" >
+<Obj plainTxt="False" ><![CDATA[WaitString "",0,0,0,0,60000,0]]></Obj>
+<Details plainTxt="False" ><![CDATA[The specified string was found at these coordinates in 0 seconds.]]></Details>
+<Time><![CDATA[7/31/2009 - 12:20:41]]></Time>
+<NodeArgs eType="Replay" icon="6" nRep="151" nType="TeScreen" >
+<Disp><![CDATA[WaitString "",0,0,0,0,60000,0]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T105" >
+<Obj plainTxt="False" ><![CDATA[Sync]]></Obj>
+<Details plainTxt="False" ><![CDATA[Sync]]></Details>
+<Time><![CDATA[7/31/2009 - 12:20:41]]></Time>
+<NodeArgs eType="Replay" icon="6" nRep="152" >
+<Disp><![CDATA[Sync]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T106" >
+<Obj plainTxt="False" ><![CDATA[TeScreen]]></Obj>
+<Details plainTxt="False" ><![CDATA[Object exists]]></Details>
+<Time><![CDATA[7/31/2009 - 12:20:46]]></Time>
+<NodeArgs eType="Replay" icon="6" nRep="154" nType="TeScreen" >
+<Disp><![CDATA[TeScreen]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T107" >
+<Obj plainTxt="False" ><![CDATA[WaitString "",0,0,0,0,60000,0]]></Obj>
+<Details plainTxt="False" ><![CDATA[The specified string was found at these coordinates in 0 seconds.]]></Details>
+<Time><![CDATA[7/31/2009 - 12:20:46]]></Time>
+<NodeArgs eType="Replay" icon="6" nRep="155" nType="TeScreen" >
+<Disp><![CDATA[WaitString "",0,0,0,0,60000,0]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T108" >
+<Obj plainTxt="False" ><![CDATA[SendKey "TE_CLEAR"]]></Obj>
+<Details plainTxt="False" ><![CDATA[SendKey "TE_CLEAR"]]></Details>
+<Time><![CDATA[7/31/2009 - 12:20:46]]></Time>
+<NodeArgs eType="Replay" icon="6" nRep="157" >
+<Disp><![CDATA[SendKey "TE_CLEAR"]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T109" >
+<Obj plainTxt="False" ><![CDATA[WaitString "",0,0,0,0,60000,0]]></Obj>
+<Details plainTxt="False" ><![CDATA[The specified string was found at these coordinates in 0 seconds.]]></Details>
+<Time><![CDATA[7/31/2009 - 12:20:47]]></Time>
+<NodeArgs eType="Replay" icon="6" nRep="158" nType="TeScreen" >
+<Disp><![CDATA[WaitString "",0,0,0,0,60000,0]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T110" >
+<Obj plainTxt="False" ><![CDATA[SendKey "TE_CLEAR"]]></Obj>
+<Details plainTxt="False" ><![CDATA[SendKey "TE_CLEAR"]]></Details>
+<Time><![CDATA[7/31/2009 - 12:20:47]]></Time>
+<NodeArgs eType="Replay" icon="6" nRep="160" >
+<Disp><![CDATA[SendKey "TE_CLEAR"]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T111" >
+<Obj plainTxt="False" ><![CDATA[SetText 1,2,"LOGOFF "]]></Obj>
+<Details plainTxt="False" ><![CDATA[SetText 1,2,"LOGOFF "]]></Details>
+<Time><![CDATA[7/31/2009 - 12:20:47]]></Time>
+<NodeArgs eType="Replay" icon="6" nRep="162" >
+<Disp><![CDATA[SetText 1,2,"LOGOFF "]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T112" >
+<Obj plainTxt="False" ><![CDATA[SendKey "TE_ENTER"]]></Obj>
+<Details plainTxt="False" ><![CDATA[SendKey "TE_ENTER"]]></Details>
+<Time><![CDATA[7/31/2009 - 12:20:47]]></Time>
+<NodeArgs eType="Replay" icon="6" nRep="164" >
+<Disp><![CDATA[SendKey "TE_ENTER"]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T113" >
+<Obj plainTxt="False" ><![CDATA[WaitString "",0,0,0,0,60000,0]]></Obj>
+<Details plainTxt="False" ><![CDATA[The specified string was found at these coordinates in 0 seconds.]]></Details>
+<Time><![CDATA[7/31/2009 - 12:20:52]]></Time>
+<NodeArgs eType="Replay" icon="6" nRep="165" nType="TeScreen" >
+<Disp><![CDATA[WaitString "",0,0,0,0,60000,0]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="6" nRep="18" >
+<Disp><![CDATA[TeScreen]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="5" nRep="11" >
+<Disp><![CDATA[TeWindow]]></Disp>
+</NodeArgs>
+</Step>
+<Summary sTime="7/31/2009 - 12:19:50" eTime="7/31/2009 - 12:20:53" passed="0" failed="0" warnings="0" ><Param ><ParamName><![CDATA[ReportName]]></ParamName><ParamVal><![CDATA[STBK_UB92]]></ParamVal>
+</Param>
+<Param ><ParamName><![CDATA[DataSheetName]]></ParamName><ParamVal><![CDATA[UB92 Claims]]></ParamVal>
+</Param>
+<Param ><ParamName><![CDATA[ResultFolderPath]]></ParamName><ParamVal><![CDATA[C:\STBK_Framework\Results]]></ParamVal>
+</Param>
+</Summary>
+<NodeArgs eType="StartAction" icon="4" nRep="8" >
+<Disp><![CDATA[Main Script Summary]]></Disp>
+</NodeArgs>
+</Action>
+<Summary sTime="7/31/2009 - 12:19:44" eTime="7/31/2009 - 12:20:56" passed="0" failed="0" warnings="0" ></Summary>
+<NodeArgs eType="StartAction" icon="4" nRep="7" >
+<Disp><![CDATA[Driver Script Summary]]></Disp>
+</NodeArgs>
+</Action>
+<NodeArgs eType="StartIteration" icon="3" nRep="6" >
+<Disp><![CDATA[Driver Script Iteration 1 (Row 1)]]></Disp>
+</NodeArgs>
+</DIter>
+<Summary sTime="7/31/2009 - 12:19:43" eTime="7/31/2009 - 12:20:56" passed="0" failed="0" warnings="0" ></Summary>
+<NodeArgs eType="StartTest" icon="1" nRep="3" >
+<Disp><![CDATA[Test Driver Script Summary]]></Disp>
+</NodeArgs>
+</Doc>
+</Report>

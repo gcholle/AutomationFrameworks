@@ -1,0 +1,4 @@
+HouseHoldSummary	AnnualIncome
+
+CurrentIncome	SelfAttestedIncome	CurrentIncomeDetails
+Above 3 functions are grouped to form one function --> ApplicantIncome

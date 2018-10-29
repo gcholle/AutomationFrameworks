@@ -1,0 +1,5 @@
+1. Rename all the .txt files in all the subfolders of framework folder to .vbs
+
+2. Rename CAFT.txt file to CAFT.ini
+
+3. Follow the documents given in Documentation folder to design and execute the scripts

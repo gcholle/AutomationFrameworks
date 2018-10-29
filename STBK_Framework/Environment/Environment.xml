@@ -1,0 +1,70 @@
+<Environment>
+	<Variable>
+		<Name>ScreenMapPath</Name>
+		<Value>C:\TOPS Automation\Object Repositories</Value>
+	</Variable>
+	<Variable>
+		<Name>UserID</Name>
+		<Value></Value>
+	</Variable>
+	<Variable>
+		<Name>UserPwd</Name>
+		<Value></Value>
+	</Variable>
+	<Variable>
+		<Name>LocalBasePath</Name>
+		<Value>C:\TOPS Automation</Value>
+	</Variable>
+	<Variable>
+		<Name>ResultFolderPath</Name>
+		<Value>C:\TOPS Automation\Results</Value>
+	</Variable>
+	<Variable>
+		<Name>ModuleName</Name>
+		<Value>Calc a Claim</Value>
+	</Variable>
+	<Variable>
+		<Name>Execute</Name>
+		<Value>Yes</Value>
+	</Variable>
+	<Variable>
+		<Name>UpdateTD</Name>
+		<Value>No</Value>
+	</Variable>
+	<Variable>
+		<Name>ScreenCapture</Name>
+		<Value>On Error</Value>
+	</Variable>
+	<Variable>
+		<Name>TD_Domain</Name>
+		<Value>Domain_13</Value>
+	</Variable>
+	<Variable>
+		<Name>TD_Project</Name>
+		<Value>CASS_Regression</Value>
+	</Variable>
+	<Variable>
+		<Name>TD_User_ID</Name>
+		<Value></Value>
+	</Variable>
+	<Variable>
+		<Name>TD_Password</Name>
+		<Value></Value>
+	</Variable>
+	<Variable>
+		<Name>Region</Name>
+		<Value>cicturq1</Value>
+	</Variable>
+	<Variable>
+		<Name>TD_Path_Level1</Name>
+		<Value></Value>
+	</Variable>
+	<Variable>
+		<Name>TD_Path_Level2</Name>
+		<Value></Value>
+	</Variable>
+	<Variable>
+		<Name>TD_Path_Level3</Name>
+		<Value></Value>
+	</Variable>
+</Environment>

@@ -1,0 +1,1 @@
+\\Nas00582pn\iSTARR\Automation\Application\Prospective\exe\WinSCP\WinSCP /console /command "open cseuser:ingenix@10.231.236.144:22" "option batch on" "option confirm off" "get /data/qa/QA_Utilities/bharath/state_test_scripts/%1 %2" "exit"
